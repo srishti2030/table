@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>document</title>
+    </head>
+    <body>
+        <style>
+            *{
+                box-sizing:border-box;
+                margin:0;
+            }
+            body{background:#FFADB9;}
+            #image
+            {
+                width:100%;
+                margin:auto;
+                height:70px;
+                margin:auto;
+                margin-top:50px;
+                position: fixed;
+                z-index:5;
+            }
+
+            .pic
+            {
+                width:100%;
+                margin:auto;
+                position: fixed;
+            }
+
+            #type
+            {
+                width:100%;
+                text-align:center;
+                margin-top:30px;
+    
+            }
+
+            #main{
+                width:380px;
+                padding:10px;
+                text-align:center;
+                margin:auto;
+            }
+            label{margin:2px}
+            
+            #output{width:100%;
+            height:96%;
+            margin-top:42%;
+            padding:2px;
+            font-size:23px;
+            color:#FFADB9;
+            line-height: 38px;
+            font-family: Comic Sans MS;
+}
+
+#userinput
+{
+    position: fixed;
+    z-index: 2;
+    width: 29%;
+    height: 20px;
+    top:28%;
+    margin:auto;
+    left:47%;
+    color: black;
+    border:0px red solid;
+    background: transparent;
+    
+}
+.logo
+{
+width:100%;
+margin:auto;
+}
+        </style>
+
+        <div id="image">
+            <img src="images/aaaa.png" class="pic">
+        </div>
+        
+
+        <div id="main">
+         <div><input id="userinput" type="number" min="2" max="900"></div>
+         <div id="output"></div>
+        </div>
+
+        <div id="type">
+            
+        </div>
+        
+
+        <script>
+
+            var topheading = ""
+            var u = document.getElementById("userinput")
+            var out = document.getElementById("output")
+            var m;
+            u.onkeyup=function()
+            {
+                m=""
+                out.innerHTML=topheading+""
+
+                for(var i=1;i<=10;i++)
+            {
+                m+=u.value+"*"+i+"="+i*u.value+"<br/>"
+            }
+            out.innerHTML+=m
+            }
+
+            /*  ==================  */
+
+            u.onchange=function()
+            {
+                m=""
+                out.innerHTML=topheading+""
+
+                for(var i=1;i<=10;i++)
+            {
+                m+=u.value+"*"+i+"="+i*u.value+"<br/>"
+            }
+            out.innerHTML+=m
+            }
+
+              /*  ==================  */
+
+            
+
+        </script>
+
+    </body>
+</html>
